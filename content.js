@@ -1,10 +1,11 @@
 function filterComments() {
     chrome.storage.sync.get(
         {
-            filterLevel: "soft"
+            filterLevel: "soft",
+            blacklistedWords: DEFAULT_BLACKLISTED_WORDS
         },
         (settings) => {
-            if (settings.filterLevel === "off") {
+            if (settings.filterLevel === "off" || settings.blacklistedWords.length === 0) {
                 return;
             }
 
@@ -19,7 +20,7 @@ function filterComments() {
                 const body = getCommentBody(comment);
                 const text = body.textContent.toLowerCase();
 
-                const blocked = BLACKLISTED_WORDS.some((word) =>
+                const blocked = settings.blacklistedWords.some((word) =>
                     text.includes(word.toLowerCase())
                 );
 
@@ -33,7 +34,7 @@ function filterComments() {
                         break;
 
                     case "soft":
-                        removeBlacklistedWords(body);
+                        removeBlacklistedWords(body, settings.blacklistedWords);
                         break;
 
                     case "collapsed":
@@ -62,7 +63,7 @@ observer.observe(document.body, {
 
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
-    if (areaName !== "sync" || !changes.filterLevel) {
+    if (areaName !== "sync" || (!changes.filterLevel && !changes.blacklistedWords)) {
         return;
     }
 

@@ -1,3 +1,3 @@
-const BLACKLISTED_WORDS = [
+const DEFAULT_BLACKLISTED_WORDS = [
     "core",
 ];

@@ -1,5 +1,5 @@
 body {
-    width: 220px;
+    width: 240px;
     padding: 16px;
     margin: 0;
     border-radius: 16px;
@@ -15,6 +15,16 @@ html {
 
 h1 {
     margin-top: 0;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
 }
 
 select {
@@ -22,4 +32,76 @@ select {
     margin-top: 8px;
     padding: 6px;
     border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#wordInputRow {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+#wordInput {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+#addWordButton {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#addWordButton:hover {
+    background: #000;
+}
+
+#wordList {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#wordList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    background: #f2f2f2;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    word-break: break-word;
+}
+
+#wordList li.emptyState {
+    color: #999;
+    font-style: italic;
+    background: none;
+    padding: 5px 2px;
+}
+
+.removeWordButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #999;
+    line-height: 1;
+    padding: 0 0 0 8px;
+}
+
+.removeWordButton:hover {
+    color: #c00;
 }
