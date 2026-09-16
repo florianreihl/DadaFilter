@@ -4,6 +4,8 @@ DadaFilter is a Chrome extension that filters comments on `r/AestheticWiki` base
 
 I use AestheticWiki like a Pinterest board, but I got tired of seeing so many aesthetics described with words ending in -core, so I made this to filter them out. Version 2 will remove all comments.
 
+<img width="1280" height="800" alt="Image-1" src="https://github.com/user-attachments/assets/d1b225c3-d745-4321-9aee-a21d88b47728" />
+
 ## Modes
 
 * **Off** — no filtering
