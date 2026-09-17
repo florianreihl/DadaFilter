@@ -8,6 +8,10 @@ I use AestheticWiki like a Pinterest board, but I got tired of seeing so many ae
   <img width="640" height="400" alt="Image-1" src="https://github.com/user-attachments/assets/d1b225c3-d745-4321-9aee-a21d88b47728" />
 </p>
 
+## Release
+Get it on the Chrome Web Store:
+https://chromewebstore.google.com/detail/dadafilter/gdlbhcepleabonocfjojldephogkkmmg?authuser=0&hl=en
+
 ## Modes
 
 * **Off** — no filtering
